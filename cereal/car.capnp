@@ -13,7 +13,8 @@ struct CarEvent @0x9b1657f34caf3ad3 {
   name @0 :EventName;
   enable @1 :Bool;
   noEntry @2 :Bool;
-  warning @3 :Bool;
+  warning @3 :Bool;  # alerts presented only when  enabled or soft disabling
+  alert @9 :Bool;    # alerts presented regardless of openpilot state
   userDisable @4 :Bool;
   softDisable @5 :Bool;
   immediateDisable @6 :Bool;
@@ -97,6 +98,12 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     relayMalfunction @72;
     gasPressed @73;
     stockFcw @74;
+    startup @75;
+    startupNoCar @76;
+    startupNoControl @77;
+    startupMaster @78;
+    fcw @79;
+    steerSaturated @80;
   }
 }
 
